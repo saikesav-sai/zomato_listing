@@ -5,22 +5,24 @@ import './RestaurantList.css';
 const RestaurantList = () => {
     const [restaurants, setRestaurants] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [loading, setLoading] = useState(true);
     const [total, setTotal] = useState(0);
     const limit = 25;
 
     useEffect(() => {
         const fetchRestaurants = async () => {
-            const response = await fetch(`http://localhost:8000/restaurantslist?page=${currentPage}&limit=${limit}`);
+            const response = await fetch(`https://zomatolisting-bss33nn7y.vercel.app/restaurantslist?page=${currentPage}&limit=${limit}`);
             const data = await response.json();
             setRestaurants(data.restaurants);
             setTotal(data.total);
+            setLoading(false);
         };
 
         fetchRestaurants();
     }, [currentPage]);
 
     const totalPages = Math.ceil(total / limit);
-
+    if (loading) return <div className="restaurant-list-container">Loading...</div>;
     const generatePageNumbers = () => {
         const pageNumbers = [];
         pageNumbers.push(1);
