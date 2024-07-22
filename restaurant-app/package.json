@@ -2,7 +2,7 @@
   "name": "restaurant-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sai-kesav-gvp.github.io/restaurant-app",
+  "homepage": "https://saikesav-sai.github.io/zomato_listing/",
 
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
