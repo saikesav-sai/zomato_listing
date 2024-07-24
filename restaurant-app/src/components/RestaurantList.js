@@ -11,7 +11,7 @@ const RestaurantList = () => {
 
     useEffect(() => {
         const fetchRestaurants = async () => {
-            const response = await fetch(`https://zomatolisting-f7dh7246r.vercel.app//restaurantslist?page=${currentPage}&limit=${limit}`);
+            const response = await fetch(`https://zomatolisting-gainedi-venkata-sai-kesavs-projects-5e1dcf25.vercel.app/restaurantslist?page=${currentPage}&limit=${limit}`);
             const data = await response.json();
             setRestaurants(data.restaurants);
             setTotal(data.total);
