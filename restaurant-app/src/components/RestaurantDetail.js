@@ -15,7 +15,7 @@ const RestaurantDetails = () => {
       const rating_number = document.getElementById('rating_number').value;
       const rating_text = document.getElementById('rating_text').value;
       const res_id = restaurantId;
-      const response = await fetch(`https://zomatolisting-bss33nn7y.vercel.app/postFeedback`, {
+      const response = await fetch(`https://zomatolisting-f7dh7246r.vercel.app//postFeedback`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ const RestaurantDetails = () => {
   useEffect(() => {
     const fetchRestaurantDetails = async () => {
       try {
-        const response = await fetch(`https://zomatolisting-bss33nn7y.vercel.app/restaurantsDetails/${restaurantId}`);
+        const response = await fetch(`https://zomatolisting-f7dh7246r.vercel.app//restaurantsDetails/${restaurantId}`);
         if (!response.ok) {
           throw new Error('Restaurant not found');
         }
