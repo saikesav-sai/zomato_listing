@@ -15,7 +15,7 @@ const RestaurantDetails = () => {
       const rating_number = document.getElementById('rating_number').value;
       const rating_text = document.getElementById('rating_text').value;
       const res_id = restaurantId;
-      const response = await fetch(`http://127.0.0.1:8000/postFeedback/`, {
+      const response = await fetch(`https://zomatolisting-bss33nn7y.vercel.app/postFeedback/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
